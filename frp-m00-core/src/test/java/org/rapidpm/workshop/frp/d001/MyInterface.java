@@ -19,10 +19,10 @@ public interface MyInterface {
 
   public void doWork01();
   public default void doWork02(){
-    doPrivateWork();
+    //doPrivateWork();
   }
   //since 9
-  private void doPrivateWork(){}
+  //private void doPrivateWork(){}
   public static void doStaticWork01(){ };
   public static String MY_STRING = "blub";
 
