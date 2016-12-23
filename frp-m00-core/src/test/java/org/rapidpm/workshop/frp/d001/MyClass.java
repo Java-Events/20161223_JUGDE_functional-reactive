@@ -18,6 +18,19 @@ import java.time.LocalDateTime;
  */
 public class MyClass {
 
+  public static final SubClass SUB_CLASS_02 = new SubClass();
+  public static final SubClass SUB_CLASS_01 = new SubClass();
+
+  static { System.out.println("static01 = " + LocalDateTime.now()); }
+  static { System.out.println("static02 = " + LocalDateTime.now()); }
+
+  { System.out.println("non-static01 = " + LocalDateTime.now()); }
+  { System.out.println("non-static02 = " + LocalDateTime.now()); }
+
+
+  public final SubClass subClass01 = new SubClass();
+  public final SubClass subClass02 = new SubClass();
+
   public MyClass() {
     System.out.println("constructor = " + LocalDateTime.now());
   }
@@ -26,4 +39,11 @@ public class MyClass {
   public static void main(String[] args) {
     new MyClass();
   }
+
+  public static class SubClass {
+    public SubClass() {
+      System.out.println("SubClass - constructor = " + LocalDateTime.now());
+    }
+  }
+
 }
